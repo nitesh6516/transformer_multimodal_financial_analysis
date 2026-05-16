@@ -1,0 +1,732 @@
+2026-05-08 02:13:13.776 | INFO     | multimodal_financial_analysis:run_pipeline:2204 - Starting multimodal financial analysis pipeline
+2026-05-08 02:13:13.777 | INFO     | multimodal_financial_analysis:run_pipeline:2205 - Configuration: {
+  "symbols": [
+    "AAPL",
+    "MSFT",
+    "TSLA"
+  ],
+  "start_date": "2020-01-01",
+  "end_date": "2026-05-01",
+  "model_type": "transformer",
+  "sentiment_mode": "random",
+  "initial_capital": 10000,
+  "position_size_pct": 0.1,
+  "stop_loss": 0.02,
+  "take_profit": 0.04,
+  "sequence_length": 20,
+  "epochs": 50,
+  "batch_size": 32,
+  "learning_rate": 0.0001,
+  "plotly_studio_mode": false,
+  "label_mode": "dynamic",
+  "fixed_threshold": 0.01,
+  "forward_days": 5,
+  "rolling_vol_window": 20,
+  "probability_threshold": 0.6,
+  "cache_path": "financial_data_cache.db",
+  "artifacts_dir": ".",
+  "random_seed": 42,
+  "min_training_rows": 80,
+  "rf_cv_splits": 5,
+  "rf_n_jobs": -1,
+  "lstm_hidden_size": 96,
+  "lstm_num_layers": 2,
+  "lstm_bidirectional": true,
+  "transformer_d_model": 96,
+  "transformer_heads": 4,
+  "transformer_layers": 2,
+  "fusion_dim": 96,
+  "dropout": 0.2,
+  "early_stopping_patience": 7,
+  "finbert_local_only": true,
+  "alpha_vantage_api_key": null,
+  "twelve_data_api_key": null,
+  "finnhub_api_key": null,
+  "tiingo_api_key": null,
+  "polygon_api_key": null
+}
+2026-05-08 02:13:13.866 | INFO     | multimodal_financial_analysis:fetch_symbol:425 - AAPL: cache coverage 0.0%; fetching provider fallbacks
+2026-05-08 02:13:14.596 | WARNING  | multimodal_financial_analysis:fetch_symbol:443 - AAPL: yfinance returned no rows
+2026-05-08 02:13:14.596 | INFO     | multimodal_financial_analysis:fetch_symbol:438 - AAPL: skipping alpha_vantage; API key not configured
+2026-05-08 02:13:14.596 | INFO     | multimodal_financial_analysis:fetch_symbol:438 - AAPL: skipping twelvedata; API key not configured
+2026-05-08 02:13:14.596 | INFO     | multimodal_financial_analysis:fetch_symbol:438 - AAPL: skipping finnhub; API key not configured
+2026-05-08 02:13:14.597 | INFO     | multimodal_financial_analysis:fetch_symbol:438 - AAPL: skipping tiingo; API key not configured
+2026-05-08 02:13:14.597 | INFO     | multimodal_financial_analysis:fetch_symbol:438 - AAPL: skipping polygon; API key not configured
+2026-05-08 02:14:50.813 | INFO     | multimodal_financial_analysis:run_pipeline:2250 - Starting multimodal financial analysis pipeline
+2026-05-08 02:14:50.814 | INFO     | multimodal_financial_analysis:run_pipeline:2251 - Configuration: {
+  "symbols": [
+    "AAPL",
+    "MSFT",
+    "TSLA"
+  ],
+  "start_date": "2020-01-01",
+  "end_date": "2026-05-01",
+  "model_type": "transformer",
+  "sentiment_mode": "random",
+  "initial_capital": 10000,
+  "position_size_pct": 0.1,
+  "stop_loss": 0.02,
+  "take_profit": 0.04,
+  "sequence_length": 20,
+  "epochs": 50,
+  "batch_size": 32,
+  "learning_rate": 0.0001,
+  "plotly_studio_mode": false,
+  "label_mode": "dynamic",
+  "fixed_threshold": 0.01,
+  "forward_days": 5,
+  "rolling_vol_window": 20,
+  "probability_threshold": 0.6,
+  "cache_path": "financial_data_cache.db",
+  "artifacts_dir": ".",
+  "random_seed": 42,
+  "min_training_rows": 80,
+  "rf_cv_splits": 5,
+  "rf_n_jobs": -1,
+  "lstm_hidden_size": 96,
+  "lstm_num_layers": 2,
+  "lstm_bidirectional": true,
+  "transformer_d_model": 96,
+  "transformer_heads": 4,
+  "transformer_layers": 2,
+  "fusion_dim": 96,
+  "dropout": 0.2,
+  "early_stopping_patience": 7,
+  "finbert_local_only": true,
+  "allow_offline_demo_data": true,
+  "alpha_vantage_api_key": null,
+  "twelve_data_api_key": null,
+  "finnhub_api_key": null,
+  "tiingo_api_key": null,
+  "polygon_api_key": null
+}
+2026-05-08 02:14:50.891 | INFO     | multimodal_financial_analysis:fetch_symbol:427 - AAPL: cache coverage 0.0%; fetching provider fallbacks
+2026-05-08 02:14:51.370 | WARNING  | multimodal_financial_analysis:fetch_symbol:445 - AAPL: yfinance returned no rows
+2026-05-08 02:14:51.371 | INFO     | multimodal_financial_analysis:fetch_symbol:440 - AAPL: skipping alpha_vantage; API key not configured
+2026-05-08 02:14:51.371 | INFO     | multimodal_financial_analysis:fetch_symbol:440 - AAPL: skipping twelvedata; API key not configured
+2026-05-08 02:14:51.371 | INFO     | multimodal_financial_analysis:fetch_symbol:440 - AAPL: skipping finnhub; API key not configured
+2026-05-08 02:14:51.372 | INFO     | multimodal_financial_analysis:fetch_symbol:440 - AAPL: skipping tiingo; API key not configured
+2026-05-08 02:14:51.372 | INFO     | multimodal_financial_analysis:fetch_symbol:440 - AAPL: skipping polygon; API key not configured
+2026-05-08 02:14:51.377 | WARNING  | multimodal_financial_analysis:fetch_symbol:460 - AAPL: no live provider data available; generating deterministic offline demo bars
+2026-05-08 02:14:51.829 | INFO     | multimodal_financial_analysis:fetch_symbol:427 - MSFT: cache coverage 0.0%; fetching provider fallbacks
+2026-05-08 02:14:51.963 | WARNING  | multimodal_financial_analysis:fetch_symbol:445 - MSFT: yfinance returned no rows
+2026-05-08 02:14:51.964 | INFO     | multimodal_financial_analysis:fetch_symbol:440 - MSFT: skipping alpha_vantage; API key not configured
+2026-05-08 02:14:51.964 | INFO     | multimodal_financial_analysis:fetch_symbol:440 - MSFT: skipping twelvedata; API key not configured
+2026-05-08 02:14:51.964 | INFO     | multimodal_financial_analysis:fetch_symbol:440 - MSFT: skipping finnhub; API key not configured
+2026-05-08 02:14:51.965 | INFO     | multimodal_financial_analysis:fetch_symbol:440 - MSFT: skipping tiingo; API key not configured
+2026-05-08 02:14:51.965 | INFO     | multimodal_financial_analysis:fetch_symbol:440 - MSFT: skipping polygon; API key not configured
+2026-05-08 02:14:51.969 | WARNING  | multimodal_financial_analysis:fetch_symbol:460 - MSFT: no live provider data available; generating deterministic offline demo bars
+2026-05-08 02:14:52.458 | INFO     | multimodal_financial_analysis:fetch_symbol:427 - TSLA: cache coverage 0.0%; fetching provider fallbacks
+2026-05-08 02:14:52.630 | WARNING  | multimodal_financial_analysis:fetch_symbol:445 - TSLA: yfinance returned no rows
+2026-05-08 02:14:52.630 | INFO     | multimodal_financial_analysis:fetch_symbol:440 - TSLA: skipping alpha_vantage; API key not configured
+2026-05-08 02:14:52.631 | INFO     | multimodal_financial_analysis:fetch_symbol:440 - TSLA: skipping twelvedata; API key not configured
+2026-05-08 02:14:52.631 | INFO     | multimodal_financial_analysis:fetch_symbol:440 - TSLA: skipping finnhub; API key not configured
+2026-05-08 02:14:52.631 | INFO     | multimodal_financial_analysis:fetch_symbol:440 - TSLA: skipping tiingo; API key not configured
+2026-05-08 02:14:52.631 | INFO     | multimodal_financial_analysis:fetch_symbol:440 - TSLA: skipping polygon; API key not configured
+2026-05-08 02:14:52.636 | WARNING  | multimodal_financial_analysis:fetch_symbol:460 - TSLA: no live provider data available; generating deterministic offline demo bars
+2026-05-08 02:15:28.376 | INFO     | multimodal_financial_analysis:run_pipeline:2250 - Starting multimodal financial analysis pipeline
+2026-05-08 02:15:28.377 | INFO     | multimodal_financial_analysis:run_pipeline:2251 - Configuration: {
+  "symbols": [
+    "AAPL",
+    "MSFT",
+    "TSLA"
+  ],
+  "start_date": "2020-01-01",
+  "end_date": "2026-05-01",
+  "model_type": "transformer",
+  "sentiment_mode": "random",
+  "initial_capital": 10000,
+  "position_size_pct": 0.1,
+  "stop_loss": 0.02,
+  "take_profit": 0.04,
+  "sequence_length": 20,
+  "epochs": 50,
+  "batch_size": 32,
+  "learning_rate": 0.0001,
+  "plotly_studio_mode": false,
+  "label_mode": "dynamic",
+  "fixed_threshold": 0.01,
+  "forward_days": 5,
+  "rolling_vol_window": 20,
+  "probability_threshold": 0.6,
+  "cache_path": "financial_data_cache.db",
+  "artifacts_dir": ".",
+  "random_seed": 42,
+  "min_training_rows": 80,
+  "rf_cv_splits": 5,
+  "rf_n_jobs": -1,
+  "lstm_hidden_size": 96,
+  "lstm_num_layers": 2,
+  "lstm_bidirectional": true,
+  "transformer_d_model": 96,
+  "transformer_heads": 4,
+  "transformer_layers": 2,
+  "fusion_dim": 96,
+  "dropout": 0.2,
+  "early_stopping_patience": 7,
+  "finbert_local_only": true,
+  "allow_offline_demo_data": true,
+  "alpha_vantage_api_key": null,
+  "twelve_data_api_key": null,
+  "finnhub_api_key": null,
+  "tiingo_api_key": null,
+  "polygon_api_key": null
+}
+2026-05-08 02:15:28.464 | INFO     | multimodal_financial_analysis:fetch_symbol:424 - AAPL: cache hit with 100.0% business-day coverage
+2026-05-08 02:15:32.138 | INFO     | multimodal_financial_analysis:fetch_symbol:424 - MSFT: cache hit with 100.0% business-day coverage
+2026-05-08 02:15:35.557 | INFO     | multimodal_financial_analysis:fetch_symbol:424 - TSLA: cache hit with 100.0% business-day coverage
+2026-05-08 02:16:01.941 | INFO     | multimodal_financial_analysis:run_pipeline:2250 - Starting multimodal financial analysis pipeline
+2026-05-08 02:16:01.943 | INFO     | multimodal_financial_analysis:run_pipeline:2251 - Configuration: {
+  "symbols": [
+    "AAPL",
+    "MSFT",
+    "TSLA"
+  ],
+  "start_date": "2020-01-01",
+  "end_date": "2026-05-01",
+  "model_type": "transformer",
+  "sentiment_mode": "random",
+  "initial_capital": 10000,
+  "position_size_pct": 0.1,
+  "stop_loss": 0.02,
+  "take_profit": 0.04,
+  "sequence_length": 20,
+  "epochs": 50,
+  "batch_size": 32,
+  "learning_rate": 0.0001,
+  "plotly_studio_mode": false,
+  "label_mode": "dynamic",
+  "fixed_threshold": 0.01,
+  "forward_days": 5,
+  "rolling_vol_window": 20,
+  "probability_threshold": 0.6,
+  "cache_path": "financial_data_cache.db",
+  "artifacts_dir": ".",
+  "random_seed": 42,
+  "min_training_rows": 80,
+  "rf_cv_splits": 5,
+  "rf_n_jobs": -1,
+  "lstm_hidden_size": 96,
+  "lstm_num_layers": 2,
+  "lstm_bidirectional": true,
+  "transformer_d_model": 96,
+  "transformer_heads": 4,
+  "transformer_layers": 2,
+  "fusion_dim": 96,
+  "dropout": 0.2,
+  "early_stopping_patience": 7,
+  "finbert_local_only": true,
+  "allow_offline_demo_data": true,
+  "alpha_vantage_api_key": null,
+  "twelve_data_api_key": null,
+  "finnhub_api_key": null,
+  "tiingo_api_key": null,
+  "polygon_api_key": null
+}
+2026-05-08 02:16:02.029 | INFO     | multimodal_financial_analysis:fetch_symbol:424 - AAPL: cache hit with 100.0% business-day coverage
+2026-05-08 02:16:05.752 | INFO     | multimodal_financial_analysis:fetch_symbol:424 - MSFT: cache hit with 100.0% business-day coverage
+2026-05-08 02:16:08.746 | INFO     | multimodal_financial_analysis:fetch_symbol:424 - TSLA: cache hit with 100.0% business-day coverage
+2026-05-08 02:16:11.041 | INFO     | multimodal_financial_analysis:transform:821 - AAPL: engineered 44 columns
+2026-05-08 02:16:11.182 | INFO     | multimodal_financial_analysis:transform:821 - MSFT: engineered 44 columns
+2026-05-08 02:16:11.321 | INFO     | multimodal_financial_analysis:transform:821 - TSLA: engineered 44 columns
+2026-05-08 02:16:12.578 | INFO     | multimodal_financial_analysis:fit_scaler:1124 - Fitted RobustScaler on 3039 training rows and 39 features
+2026-05-08 02:16:48.243 | INFO     | multimodal_financial_analysis:train_torch_model:1461 - Training transformer on cpu with 3039 train windows
+2026-05-08 02:16:57.573 | INFO     | multimodal_financial_analysis:train_torch_model:1524 - transformer epoch 1: train_loss=1.1421, val_loss=1.0884
+2026-05-08 02:17:20.210 | INFO     | multimodal_financial_analysis:train_torch_model:1524 - transformer epoch 5: train_loss=1.1116, val_loss=1.0835
+2026-05-08 02:17:49.636 | INFO     | multimodal_financial_analysis:train_torch_model:1524 - transformer epoch 10: train_loss=1.0970, val_loss=1.0823
+2026-05-08 02:18:17.998 | INFO     | multimodal_financial_analysis:train_torch_model:1524 - transformer epoch 15: train_loss=1.0966, val_loss=1.0879
+2026-05-08 02:18:29.755 | INFO     | multimodal_financial_analysis:train_torch_model:1526 - Early stopping at epoch 17
+2026-05-08 02:18:32.606 | INFO     | multimodal_financial_analysis:run_pipeline:2320 - Pipeline completed
+2026-05-08 02:55:56.632 | INFO     | __main__:run_pipeline:2250 - Starting multimodal financial analysis pipeline
+2026-05-08 02:55:56.635 | INFO     | __main__:run_pipeline:2251 - Configuration: {
+  "symbols": [
+    "AAPL",
+    "MSFT",
+    "TSLA"
+  ],
+  "start_date": "2020-01-01",
+  "end_date": "2026-05-01",
+  "model_type": "transformer",
+  "sentiment_mode": "random",
+  "initial_capital": 10000,
+  "position_size_pct": 0.1,
+  "stop_loss": 0.02,
+  "take_profit": 0.04,
+  "sequence_length": 20,
+  "epochs": 50,
+  "batch_size": 32,
+  "learning_rate": 0.0001,
+  "plotly_studio_mode": true,
+  "label_mode": "dynamic",
+  "fixed_threshold": 0.01,
+  "forward_days": 5,
+  "rolling_vol_window": 20,
+  "probability_threshold": 0.6,
+  "cache_path": "financial_data_cache.db",
+  "artifacts_dir": ".",
+  "random_seed": 42,
+  "min_training_rows": 80,
+  "rf_cv_splits": 5,
+  "rf_n_jobs": -1,
+  "lstm_hidden_size": 96,
+  "lstm_num_layers": 2,
+  "lstm_bidirectional": true,
+  "transformer_d_model": 96,
+  "transformer_heads": 4,
+  "transformer_layers": 2,
+  "fusion_dim": 96,
+  "dropout": 0.2,
+  "early_stopping_patience": 7,
+  "finbert_local_only": true,
+  "allow_offline_demo_data": true,
+  "alpha_vantage_api_key": null,
+  "twelve_data_api_key": null,
+  "finnhub_api_key": null,
+  "tiingo_api_key": null,
+  "polygon_api_key": null
+}
+2026-05-08 02:55:56.696 | INFO     | __main__:fetch_symbol:424 - AAPL: cache hit with 100.0% business-day coverage
+2026-05-08 02:55:59.203 | INFO     | __main__:fetch_symbol:424 - MSFT: cache hit with 100.0% business-day coverage
+2026-05-08 02:56:02.116 | INFO     | __main__:fetch_symbol:424 - TSLA: cache hit with 100.0% business-day coverage
+2026-05-08 02:56:04.662 | INFO     | __main__:transform:821 - AAPL: engineered 44 columns
+2026-05-08 02:56:04.802 | INFO     | __main__:transform:821 - MSFT: engineered 44 columns
+2026-05-08 02:56:04.940 | INFO     | __main__:transform:821 - TSLA: engineered 44 columns
+2026-05-08 02:56:06.176 | INFO     | __main__:fit_scaler:1124 - Fitted RobustScaler on 3039 training rows and 39 features
+2026-05-08 02:56:32.833 | INFO     | __main__:train_torch_model:1461 - Training transformer on cpu with 3039 train windows
+2026-05-08 02:56:40.763 | INFO     | __main__:train_torch_model:1524 - transformer epoch 1: train_loss=1.1421, val_loss=1.0884
+2026-05-08 02:57:02.176 | INFO     | __main__:train_torch_model:1524 - transformer epoch 5: train_loss=1.1116, val_loss=1.0835
+2026-05-08 02:57:27.918 | INFO     | __main__:train_torch_model:1524 - transformer epoch 10: train_loss=1.0970, val_loss=1.0823
+2026-05-08 02:57:56.183 | INFO     | __main__:train_torch_model:1524 - transformer epoch 15: train_loss=1.0966, val_loss=1.0879
+2026-05-08 02:58:08.630 | INFO     | __main__:train_torch_model:1526 - Early stopping at epoch 17
+2026-05-08 02:58:11.124 | INFO     | __main__:run_pipeline:2320 - Pipeline completed
+2026-05-08 02:58:21.554 | INFO     | __main__:run_pipeline:2250 - Starting multimodal financial analysis pipeline
+2026-05-08 02:58:21.555 | INFO     | __main__:run_pipeline:2251 - Configuration: {
+  "symbols": [
+    "AAPL",
+    "MSFT",
+    "TSLA"
+  ],
+  "start_date": "2020-01-01",
+  "end_date": "2026-05-01",
+  "model_type": "transformer",
+  "sentiment_mode": "random",
+  "initial_capital": 10000,
+  "position_size_pct": 0.1,
+  "stop_loss": 0.02,
+  "take_profit": 0.04,
+  "sequence_length": 20,
+  "epochs": 50,
+  "batch_size": 32,
+  "learning_rate": 0.0001,
+  "plotly_studio_mode": true,
+  "label_mode": "dynamic",
+  "fixed_threshold": 0.01,
+  "forward_days": 5,
+  "rolling_vol_window": 20,
+  "probability_threshold": 0.6,
+  "cache_path": "financial_data_cache.db",
+  "artifacts_dir": ".",
+  "random_seed": 42,
+  "min_training_rows": 80,
+  "rf_cv_splits": 5,
+  "rf_n_jobs": -1,
+  "lstm_hidden_size": 96,
+  "lstm_num_layers": 2,
+  "lstm_bidirectional": true,
+  "transformer_d_model": 96,
+  "transformer_heads": 4,
+  "transformer_layers": 2,
+  "fusion_dim": 96,
+  "dropout": 0.2,
+  "early_stopping_patience": 7,
+  "finbert_local_only": true,
+  "allow_offline_demo_data": true,
+  "alpha_vantage_api_key": null,
+  "twelve_data_api_key": null,
+  "finnhub_api_key": null,
+  "tiingo_api_key": null,
+  "polygon_api_key": null
+}
+2026-05-08 02:58:21.606 | INFO     | __main__:fetch_symbol:424 - AAPL: cache hit with 100.0% business-day coverage
+2026-05-08 02:58:24.084 | INFO     | __main__:fetch_symbol:424 - MSFT: cache hit with 100.0% business-day coverage
+2026-05-08 02:58:26.513 | INFO     | __main__:fetch_symbol:424 - TSLA: cache hit with 100.0% business-day coverage
+2026-05-08 02:58:28.874 | INFO     | __main__:transform:821 - AAPL: engineered 44 columns
+2026-05-08 02:58:29.017 | INFO     | __main__:transform:821 - MSFT: engineered 44 columns
+2026-05-08 02:58:29.170 | INFO     | __main__:transform:821 - TSLA: engineered 44 columns
+2026-05-08 02:58:30.473 | INFO     | __main__:fit_scaler:1124 - Fitted RobustScaler on 3039 training rows and 39 features
+2026-05-08 02:58:58.216 | INFO     | __main__:train_torch_model:1461 - Training transformer on cpu with 3039 train windows
+2026-05-08 02:59:06.497 | INFO     | __main__:train_torch_model:1524 - transformer epoch 1: train_loss=1.1421, val_loss=1.0884
+2026-05-08 02:59:32.088 | INFO     | __main__:train_torch_model:1524 - transformer epoch 5: train_loss=1.1116, val_loss=1.0835
+2026-05-08 03:00:01.548 | INFO     | __main__:train_torch_model:1524 - transformer epoch 10: train_loss=1.0970, val_loss=1.0823
+2026-05-08 03:00:31.981 | INFO     | __main__:run_pipeline:2250 - Starting multimodal financial analysis pipeline
+2026-05-08 03:00:31.983 | INFO     | __main__:run_pipeline:2251 - Configuration: {
+  "symbols": [
+    "AAPL",
+    "MSFT",
+    "TSLA"
+  ],
+  "start_date": "2020-01-01",
+  "end_date": "2026-05-01",
+  "model_type": "transformer",
+  "sentiment_mode": "random",
+  "initial_capital": 10000,
+  "position_size_pct": 0.1,
+  "stop_loss": 0.02,
+  "take_profit": 0.04,
+  "sequence_length": 20,
+  "epochs": 50,
+  "batch_size": 32,
+  "learning_rate": 0.0001,
+  "plotly_studio_mode": true,
+  "label_mode": "dynamic",
+  "fixed_threshold": 0.01,
+  "forward_days": 5,
+  "rolling_vol_window": 20,
+  "probability_threshold": 0.6,
+  "cache_path": "financial_data_cache.db",
+  "artifacts_dir": ".",
+  "random_seed": 42,
+  "min_training_rows": 80,
+  "rf_cv_splits": 5,
+  "rf_n_jobs": -1,
+  "lstm_hidden_size": 96,
+  "lstm_num_layers": 2,
+  "lstm_bidirectional": true,
+  "transformer_d_model": 96,
+  "transformer_heads": 4,
+  "transformer_layers": 2,
+  "fusion_dim": 96,
+  "dropout": 0.2,
+  "early_stopping_patience": 7,
+  "finbert_local_only": true,
+  "allow_offline_demo_data": true,
+  "alpha_vantage_api_key": null,
+  "twelve_data_api_key": null,
+  "finnhub_api_key": null,
+  "tiingo_api_key": null,
+  "polygon_api_key": null
+}
+2026-05-08 03:00:32.040 | INFO     | __main__:fetch_symbol:424 - AAPL: cache hit with 100.0% business-day coverage
+2026-05-08 03:00:34.918 | INFO     | __main__:fetch_symbol:424 - MSFT: cache hit with 100.0% business-day coverage
+2026-05-08 03:00:37.199 | INFO     | __main__:fetch_symbol:424 - TSLA: cache hit with 100.0% business-day coverage
+2026-05-08 03:00:39.800 | INFO     | __main__:transform:821 - AAPL: engineered 44 columns
+2026-05-08 03:00:39.952 | INFO     | __main__:transform:821 - MSFT: engineered 44 columns
+2026-05-08 03:00:40.098 | INFO     | __main__:transform:821 - TSLA: engineered 44 columns
+2026-05-08 03:00:41.383 | INFO     | __main__:fit_scaler:1124 - Fitted RobustScaler on 3039 training rows and 39 features
+2026-05-08 03:01:10.213 | INFO     | __main__:train_torch_model:1461 - Training transformer on cpu with 3039 train windows
+2026-05-08 03:01:17.971 | INFO     | __main__:train_torch_model:1524 - transformer epoch 1: train_loss=1.1421, val_loss=1.0884
+2026-05-08 03:01:38.320 | INFO     | __main__:train_torch_model:1524 - transformer epoch 5: train_loss=1.1116, val_loss=1.0835
+2026-05-08 03:02:04.532 | INFO     | __main__:train_torch_model:1524 - transformer epoch 10: train_loss=1.0970, val_loss=1.0823
+2026-05-08 03:02:29.365 | INFO     | __main__:train_torch_model:1524 - transformer epoch 15: train_loss=1.0966, val_loss=1.0879
+2026-05-08 03:02:39.438 | INFO     | __main__:train_torch_model:1526 - Early stopping at epoch 17
+2026-05-08 03:02:41.576 | INFO     | __main__:run_pipeline:2320 - Pipeline completed
+2026-05-10 17:33:44,684 | INFO | Starting multimodal financial analysis pipeline
+2026-05-10 17:33:44,685 | INFO | Configuration: {
+  "symbols": [
+    "AAPL",
+    "MSFT",
+    "TSLA"
+  ],
+  "start_date": "2020-01-01",
+  "end_date": "2026-05-01",
+  "model_type": "transformer",
+  "sentiment_mode": "random",
+  "initial_capital": 10000,
+  "position_size_pct": 0.1,
+  "stop_loss": 0.02,
+  "take_profit": 0.04,
+  "sequence_length": 20,
+  "epochs": 50,
+  "batch_size": 32,
+  "learning_rate": 0.0001,
+  "plotly_studio_mode": true,
+  "label_mode": "dynamic",
+  "fixed_threshold": 0.01,
+  "forward_days": 5,
+  "rolling_vol_window": 20,
+  "probability_threshold": 0.6,
+  "cache_path": "financial_data_cache.db",
+  "artifacts_dir": ".",
+  "random_seed": 42,
+  "min_training_rows": 80,
+  "rf_cv_splits": 5,
+  "rf_n_jobs": -1,
+  "lstm_hidden_size": 96,
+  "lstm_num_layers": 2,
+  "lstm_bidirectional": true,
+  "transformer_d_model": 96,
+  "transformer_heads": 4,
+  "transformer_layers": 2,
+  "fusion_dim": 96,
+  "dropout": 0.2,
+  "early_stopping_patience": 7,
+  "finbert_local_only": true,
+  "allow_offline_demo_data": true,
+  "alpha_vantage_api_key": null,
+  "twelve_data_api_key": null,
+  "finnhub_api_key": null,
+  "tiingo_api_key": null,
+  "polygon_api_key": null
+}
+2026-05-10 17:33:44,740 | INFO | AAPL: cache hit with 100.0% business-day coverage
+2026-05-10 17:33:47,066 | INFO | MSFT: cache hit with 100.0% business-day coverage
+2026-05-10 17:33:49,405 | INFO | TSLA: cache hit with 100.0% business-day coverage
+2026-05-10 17:33:51,824 | INFO | AAPL: engineered 44 columns
+2026-05-10 17:33:51,968 | INFO | MSFT: engineered 44 columns
+2026-05-10 17:33:52,113 | INFO | TSLA: engineered 44 columns
+2026-05-10 17:33:53,344 | INFO | Fitted RobustScaler on 3039 training rows and 39 features
+2026-05-10 17:34:20,870 | INFO | Training transformer on cpu with 3039 train windows
+2026-05-10 17:34:36,087 | INFO | transformer epoch 1: train_loss=1.1421, val_loss=1.0884
+2026-05-10 17:34:53,774 | INFO | transformer epoch 5: train_loss=1.1116, val_loss=1.0835
+2026-05-10 17:35:15,658 | INFO | transformer epoch 10: train_loss=1.0970, val_loss=1.0823
+2026-05-10 17:35:37,340 | INFO | transformer epoch 15: train_loss=1.0966, val_loss=1.0879
+2026-05-10 17:35:46,115 | INFO | Early stopping at epoch 17
+2026-05-10 17:35:48,182 | INFO | Pipeline completed
+2026-05-10 18:16:20,484 | INFO | Starting multimodal financial analysis pipeline
+2026-05-10 18:16:20,486 | INFO | Configuration: {
+  "symbols": [
+    "AAPL",
+    "MSFT",
+    "TSLA"
+  ],
+  "start_date": "2020-01-01",
+  "end_date": "2026-05-01",
+  "model_type": "transformer",
+  "sentiment_mode": "random",
+  "initial_capital": 10000,
+  "position_size_pct": 0.1,
+  "stop_loss": 0.02,
+  "take_profit": 0.04,
+  "sequence_length": 20,
+  "epochs": 50,
+  "batch_size": 32,
+  "learning_rate": 0.0001,
+  "plotly_studio_mode": true,
+  "label_mode": "dynamic",
+  "fixed_threshold": 0.01,
+  "forward_days": 5,
+  "rolling_vol_window": 20,
+  "probability_threshold": 0.6,
+  "cache_path": "financial_data_cache.db",
+  "artifacts_dir": ".",
+  "random_seed": 42,
+  "min_training_rows": 80,
+  "rf_cv_splits": 5,
+  "rf_n_jobs": -1,
+  "lstm_hidden_size": 96,
+  "lstm_num_layers": 2,
+  "lstm_bidirectional": true,
+  "transformer_d_model": 96,
+  "transformer_heads": 4,
+  "transformer_layers": 2,
+  "fusion_dim": 96,
+  "dropout": 0.2,
+  "early_stopping_patience": 7,
+  "finbert_local_only": true,
+  "allow_offline_demo_data": true,
+  "alpha_vantage_api_key": null,
+  "twelve_data_api_key": null,
+  "finnhub_api_key": null,
+  "tiingo_api_key": null,
+  "polygon_api_key": null
+}
+2026-05-10 18:16:20,553 | INFO | AAPL: cache hit with 100.0% business-day coverage
+2026-05-10 18:16:22,916 | INFO | MSFT: cache hit with 100.0% business-day coverage
+2026-05-10 18:16:25,285 | INFO | TSLA: cache hit with 100.0% business-day coverage
+2026-05-10 18:16:27,613 | INFO | AAPL: engineered 44 columns
+2026-05-10 18:16:27,754 | INFO | MSFT: engineered 44 columns
+2026-05-10 18:16:27,895 | INFO | TSLA: engineered 44 columns
+2026-05-10 18:16:29,090 | INFO | Fitted RobustScaler on 3039 training rows and 39 features
+2026-05-10 18:17:04,203 | INFO | Training transformer on cpu with 3039 train windows
+2026-05-10 18:17:13,282 | INFO | transformer epoch 1: train_loss=1.1421, val_loss=1.0884
+2026-05-10 18:17:31,353 | INFO | transformer epoch 5: train_loss=1.1116, val_loss=1.0835
+2026-05-10 18:17:52,918 | INFO | transformer epoch 10: train_loss=1.0970, val_loss=1.0823
+2026-05-10 18:18:14,525 | INFO | transformer epoch 15: train_loss=1.0966, val_loss=1.0879
+2026-05-10 18:18:23,122 | INFO | Early stopping at epoch 17
+2026-05-10 18:18:25,182 | INFO | Pipeline completed
+2026-05-10 18:27:49,711 | INFO | Starting multimodal financial analysis pipeline
+2026-05-10 18:27:49,713 | INFO | Configuration: {
+  "symbols": [
+    "AAPL",
+    "MSFT",
+    "TSLA"
+  ],
+  "start_date": "2020-01-01",
+  "end_date": "2026-05-01",
+  "model_type": "transformer",
+  "sentiment_mode": "random",
+  "initial_capital": 10000,
+  "position_size_pct": 0.1,
+  "stop_loss": 0.02,
+  "take_profit": 0.04,
+  "sequence_length": 20,
+  "epochs": 50,
+  "batch_size": 32,
+  "learning_rate": 0.0001,
+  "plotly_studio_mode": true,
+  "label_mode": "dynamic",
+  "fixed_threshold": 0.01,
+  "forward_days": 5,
+  "rolling_vol_window": 20,
+  "probability_threshold": 0.6,
+  "cache_path": "financial_data_cache.db",
+  "artifacts_dir": ".",
+  "random_seed": 42,
+  "min_training_rows": 80,
+  "rf_cv_splits": 5,
+  "rf_n_jobs": -1,
+  "lstm_hidden_size": 96,
+  "lstm_num_layers": 2,
+  "lstm_bidirectional": true,
+  "transformer_d_model": 96,
+  "transformer_heads": 4,
+  "transformer_layers": 2,
+  "fusion_dim": 96,
+  "dropout": 0.2,
+  "early_stopping_patience": 7,
+  "finbert_local_only": true,
+  "allow_offline_demo_data": true,
+  "alpha_vantage_api_key": null,
+  "twelve_data_api_key": null,
+  "finnhub_api_key": null,
+  "tiingo_api_key": null,
+  "polygon_api_key": null
+}
+2026-05-10 18:27:49,761 | INFO | AAPL: cache hit with 100.0% business-day coverage
+2026-05-10 18:27:52,120 | INFO | MSFT: cache hit with 100.0% business-day coverage
+2026-05-10 18:27:54,451 | INFO | TSLA: cache hit with 100.0% business-day coverage
+2026-05-10 18:27:56,859 | INFO | AAPL: engineered 44 columns
+2026-05-10 18:27:57,003 | INFO | MSFT: engineered 44 columns
+2026-05-10 18:27:57,147 | INFO | TSLA: engineered 44 columns
+2026-05-10 18:27:58,356 | INFO | Fitted RobustScaler on 3039 training rows and 39 features
+2026-05-10 18:28:24,969 | INFO | Training transformer on cpu with 3039 train windows
+2026-05-10 18:28:31,836 | INFO | transformer epoch 1: train_loss=1.1421, val_loss=1.0884
+2026-05-10 18:28:50,383 | INFO | transformer epoch 5: train_loss=1.1116, val_loss=1.0835
+2026-05-10 18:29:12,132 | INFO | transformer epoch 10: train_loss=1.0970, val_loss=1.0823
+2026-05-10 18:29:33,883 | INFO | transformer epoch 15: train_loss=1.0966, val_loss=1.0879
+2026-05-10 18:29:42,526 | INFO | Early stopping at epoch 17
+2026-05-10 18:29:44,513 | INFO | Pipeline completed
+2026-05-11 11:28:40,739 | INFO | Starting multimodal financial analysis pipeline
+2026-05-11 11:28:40,741 | INFO | Configuration: {
+  "symbols": [
+    "AAPL",
+    "MSFT",
+    "TSLA"
+  ],
+  "start_date": "2020-01-01",
+  "end_date": "2026-05-01",
+  "model_type": "transformer",
+  "sentiment_mode": "random",
+  "initial_capital": 10000,
+  "position_size_pct": 0.1,
+  "stop_loss": 0.02,
+  "take_profit": 0.04,
+  "sequence_length": 20,
+  "epochs": 50,
+  "batch_size": 32,
+  "learning_rate": 0.0001,
+  "plotly_studio_mode": true,
+  "label_mode": "dynamic",
+  "fixed_threshold": 0.01,
+  "forward_days": 5,
+  "rolling_vol_window": 20,
+  "probability_threshold": 0.6,
+  "cache_path": "financial_data_cache.db",
+  "artifacts_dir": ".",
+  "random_seed": 42,
+  "min_training_rows": 80,
+  "rf_cv_splits": 5,
+  "rf_n_jobs": -1,
+  "lstm_hidden_size": 96,
+  "lstm_num_layers": 2,
+  "lstm_bidirectional": true,
+  "transformer_d_model": 96,
+  "transformer_heads": 4,
+  "transformer_layers": 2,
+  "fusion_dim": 96,
+  "dropout": 0.2,
+  "early_stopping_patience": 7,
+  "finbert_local_only": true,
+  "allow_offline_demo_data": true,
+  "alpha_vantage_api_key": null,
+  "twelve_data_api_key": null,
+  "finnhub_api_key": null,
+  "tiingo_api_key": null,
+  "polygon_api_key": null
+}
+2026-05-11 11:28:40,842 | INFO | AAPL: cache hit with 100.0% business-day coverage
+2026-05-11 11:28:44,242 | INFO | MSFT: cache hit with 100.0% business-day coverage
+2026-05-11 11:28:46,934 | INFO | TSLA: cache hit with 100.0% business-day coverage
+2026-05-11 11:28:49,402 | INFO | AAPL: engineered 44 columns
+2026-05-11 11:28:49,548 | INFO | MSFT: engineered 44 columns
+2026-05-11 11:28:49,701 | INFO | TSLA: engineered 44 columns
+2026-05-11 11:28:50,911 | INFO | Fitted RobustScaler on 3039 training rows and 39 features
+2026-05-11 11:29:17,086 | INFO | Training transformer on cpu with 3039 train windows
+2026-05-11 11:29:24,881 | INFO | transformer epoch 1: train_loss=1.1421, val_loss=1.0884
+2026-05-11 11:29:44,206 | INFO | transformer epoch 5: train_loss=1.1116, val_loss=1.0835
+2026-05-11 11:30:07,813 | INFO | transformer epoch 10: train_loss=1.0970, val_loss=1.0823
+2026-05-11 11:30:30,479 | INFO | transformer epoch 15: train_loss=1.0966, val_loss=1.0879
+2026-05-11 11:30:39,648 | INFO | Early stopping at epoch 17
+2026-05-11 11:30:41,674 | INFO | Pipeline completed
+2026-05-14 01:15:59,676 | INFO | Starting multimodal financial analysis pipeline
+2026-05-14 01:15:59,679 | INFO | Configuration: {
+  "symbols": [
+    "AAPL",
+    "MSFT",
+    "TSLA"
+  ],
+  "start_date": "2020-01-01",
+  "end_date": "2026-05-01",
+  "model_type": "transformer",
+  "sentiment_mode": "random",
+  "initial_capital": 10000,
+  "position_size_pct": 0.1,
+  "stop_loss": 0.02,
+  "take_profit": 0.04,
+  "sequence_length": 20,
+  "epochs": 50,
+  "batch_size": 32,
+  "learning_rate": 0.0001,
+  "plotly_studio_mode": true,
+  "label_mode": "dynamic",
+  "fixed_threshold": 0.01,
+  "forward_days": 5,
+  "rolling_vol_window": 20,
+  "probability_threshold": 0.6,
+  "cache_path": "financial_data_cache.db",
+  "artifacts_dir": ".",
+  "random_seed": 42,
+  "min_training_rows": 80,
+  "rf_cv_splits": 5,
+  "rf_n_jobs": -1,
+  "lstm_hidden_size": 96,
+  "lstm_num_layers": 2,
+  "lstm_bidirectional": true,
+  "transformer_d_model": 96,
+  "transformer_heads": 4,
+  "transformer_layers": 2,
+  "fusion_dim": 96,
+  "dropout": 0.2,
+  "early_stopping_patience": 7,
+  "finbert_local_only": true,
+  "allow_offline_demo_data": true,
+  "alpha_vantage_api_key": null,
+  "twelve_data_api_key": null,
+  "finnhub_api_key": null,
+  "tiingo_api_key": null,
+  "polygon_api_key": null
+}
+2026-05-14 01:15:59,765 | INFO | AAPL: cache hit with 100.0% business-day coverage
+2026-05-14 01:16:02,951 | INFO | MSFT: cache hit with 100.0% business-day coverage
+2026-05-14 01:16:06,292 | INFO | TSLA: cache hit with 100.0% business-day coverage
+2026-05-14 01:16:09,333 | INFO | AAPL: engineered 44 columns
+2026-05-14 01:16:09,522 | INFO | MSFT: engineered 44 columns
+2026-05-14 01:16:09,696 | INFO | TSLA: engineered 44 columns
+2026-05-14 01:16:11,194 | INFO | Fitted RobustScaler on 3039 training rows and 39 features
+2026-05-14 01:16:43,427 | INFO | Training transformer on cpu with 3039 train windows
+2026-05-14 01:17:06,731 | INFO | transformer epoch 1: train_loss=1.1421, val_loss=1.0884
+2026-05-14 01:17:30,293 | INFO | transformer epoch 5: train_loss=1.1116, val_loss=1.0835
+2026-05-14 01:17:57,774 | INFO | transformer epoch 10: train_loss=1.0970, val_loss=1.0823
+2026-05-14 01:18:25,962 | INFO | transformer epoch 15: train_loss=1.0966, val_loss=1.0879
+2026-05-14 01:18:37,369 | INFO | Early stopping at epoch 17
+2026-05-14 01:18:40,239 | INFO | Pipeline completed

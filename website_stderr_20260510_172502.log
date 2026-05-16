@@ -1,0 +1,9 @@
+Missing required Python packages:
+  flask, numpy, pandas, plotly, requests, scikit-learn, ta, torch, vaderSentiment, yfinance
+
+Install them with:
+  py -m pip install numpy pandas requests yfinance ta plotly flask scikit-learn torch vaderSentiment
+
+Then rerun:
+  py multimodal_financial_analysis.py
+

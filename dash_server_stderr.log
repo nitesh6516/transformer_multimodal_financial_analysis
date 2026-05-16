@@ -1,0 +1,62 @@
+2026-05-08 03:00:31.981 | INFO     | __main__:run_pipeline:2250 - Starting multimodal financial analysis pipeline
+2026-05-08 03:00:31.983 | INFO     | __main__:run_pipeline:2251 - Configuration: {
+  "symbols": [
+    "AAPL",
+    "MSFT",
+    "TSLA"
+  ],
+  "start_date": "2020-01-01",
+  "end_date": "2026-05-01",
+  "model_type": "transformer",
+  "sentiment_mode": "random",
+  "initial_capital": 10000,
+  "position_size_pct": 0.1,
+  "stop_loss": 0.02,
+  "take_profit": 0.04,
+  "sequence_length": 20,
+  "epochs": 50,
+  "batch_size": 32,
+  "learning_rate": 0.0001,
+  "plotly_studio_mode": true,
+  "label_mode": "dynamic",
+  "fixed_threshold": 0.01,
+  "forward_days": 5,
+  "rolling_vol_window": 20,
+  "probability_threshold": 0.6,
+  "cache_path": "financial_data_cache.db",
+  "artifacts_dir": ".",
+  "random_seed": 42,
+  "min_training_rows": 80,
+  "rf_cv_splits": 5,
+  "rf_n_jobs": -1,
+  "lstm_hidden_size": 96,
+  "lstm_num_layers": 2,
+  "lstm_bidirectional": true,
+  "transformer_d_model": 96,
+  "transformer_heads": 4,
+  "transformer_layers": 2,
+  "fusion_dim": 96,
+  "dropout": 0.2,
+  "early_stopping_patience": 7,
+  "finbert_local_only": true,
+  "allow_offline_demo_data": true,
+  "alpha_vantage_api_key": null,
+  "twelve_data_api_key": null,
+  "finnhub_api_key": null,
+  "tiingo_api_key": null,
+  "polygon_api_key": null
+}
+2026-05-08 03:00:32.040 | INFO     | __main__:fetch_symbol:424 - AAPL: cache hit with 100.0% business-day coverage
+2026-05-08 03:00:34.918 | INFO     | __main__:fetch_symbol:424 - MSFT: cache hit with 100.0% business-day coverage
+2026-05-08 03:00:37.199 | INFO     | __main__:fetch_symbol:424 - TSLA: cache hit with 100.0% business-day coverage
+2026-05-08 03:00:39.800 | INFO     | __main__:transform:821 - AAPL: engineered 44 columns
+2026-05-08 03:00:39.952 | INFO     | __main__:transform:821 - MSFT: engineered 44 columns
+2026-05-08 03:00:40.098 | INFO     | __main__:transform:821 - TSLA: engineered 44 columns
+2026-05-08 03:00:41.383 | INFO     | __main__:fit_scaler:1124 - Fitted RobustScaler on 3039 training rows and 39 features
+2026-05-08 03:01:10.213 | INFO     | __main__:train_torch_model:1461 - Training transformer on cpu with 3039 train windows
+2026-05-08 03:01:17.971 | INFO     | __main__:train_torch_model:1524 - transformer epoch 1: train_loss=1.1421, val_loss=1.0884
+2026-05-08 03:01:38.320 | INFO     | __main__:train_torch_model:1524 - transformer epoch 5: train_loss=1.1116, val_loss=1.0835
+2026-05-08 03:02:04.532 | INFO     | __main__:train_torch_model:1524 - transformer epoch 10: train_loss=1.0970, val_loss=1.0823
+2026-05-08 03:02:29.365 | INFO     | __main__:train_torch_model:1524 - transformer epoch 15: train_loss=1.0966, val_loss=1.0879
+2026-05-08 03:02:39.438 | INFO     | __main__:train_torch_model:1526 - Early stopping at epoch 17
+2026-05-08 03:02:41.576 | INFO     | __main__:run_pipeline:2320 - Pipeline completed

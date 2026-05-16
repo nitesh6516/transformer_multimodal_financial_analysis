@@ -1,0 +1,13 @@
+.qodo/
+.venv/
+.vscode/
+__pycache__/
+**/__pycache__/
+*.pyc
+*.log
+*.db
+*.pt
+*.pkl
+*.csv
+aether-*.png
+static/uploads/
