@@ -506,7 +506,9 @@ screenshots/
 
 Example:
 
-![Dashboard](screenshots/dashboard.png)
+[Dashboard]
+<img width="1894" height="910" alt="image" src="https://github.com/user-attachments/assets/0e8a46d5-42f9-4318-a0f4-c07031600a5f" />
+
 
 👨‍💻 **Author**
 Nitesh Kumar
